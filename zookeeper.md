@@ -3,7 +3,7 @@
 
 ## 一、关于Zookeeper Atomic Broadcast zab协议
 
-### [totally-ordered-broadcast-protocol](URL 'http://diyhpl.us/~bryan/papers2/distributed/distributed-systems/zab.totally-ordered-broadcast-protocol.2008.pdf')
+### [totally-ordered-broadcast-protocol](http://diyhpl.us/~bryan/papers2/distributed/distributed-systems/zab.totally-ordered-broadcast-protocol.2008.pdf)
 
 ### 1.介绍
  * zookeeper高可用一致性服务,一般用于读写比例为2:1的场景.读可以在当前服务中获取一致性视图,而写需要重定向到leader中,进行生成事务号,进行2pc提交,等待大多数节点同步成功,则事务成功,并返回结果.
