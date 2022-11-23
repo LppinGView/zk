@@ -94,6 +94,13 @@ zab分为recovery 和 brocaster
 
 ## 二、zookeeper源码分析（未完待续）
 
+### 源码编译运行
+* 跳过测试编译 mvn -DskipTests=true clean package
+* 复制配置文件 cp zoo_sample.conf zoo.cfg
+* 编辑启动参数 QuorumPeerMain，配置：Program arguments：conf/zoo.cfg
+* 启动根据error，处理错误
+
+
 ### 1.FastLeaderElection 使用tcp进行服务间选举，构造函数有两个参数(当期成员对象QuorumPeer，连接管理器QuorumCnxManager)
  * Notification 通知，用来通知其他成员，它自己改变了投票  由于加入选举或者它了解到其他服务具有更高的zxid或者相同的zxid但是有更高的server id
 ToSend 消息，一个成员发往另一个成员
