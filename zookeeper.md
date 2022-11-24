@@ -97,8 +97,9 @@ zab分为recovery 和 brocaster
 ### 源码编译运行
 * 跳过测试编译 mvn -DskipTests=true clean package
 * 复制配置文件 cp zoo_sample.conf zoo.cfg
-* 编辑启动参数 QuorumPeerMain，配置：Program arguments：conf/zoo.cfg
+* 编辑服务端启动参数 QuorumPeerMain，配置：Program arguments：conf/zoo.cfg，注释：相关jetty scope
 * 启动根据error，处理错误
+* 编辑客户端启动参数 ZooKeeperMain，配置：Program arguments：-server 127.0.0.1:端口，注释：commons-cli scope
 
 
 ### 1.FastLeaderElection 使用tcp进行服务间选举，构造函数有两个参数(当期成员对象QuorumPeer，连接管理器QuorumCnxManager)
