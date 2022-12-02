@@ -100,6 +100,7 @@ zab分为recovery 和 brocaster
 * 编辑服务端启动参数 QuorumPeerMain，配置：Program arguments：conf/zoo.cfg，注释：相关jetty scope, org.xerial.snappy相关的 scope
 * 启动根据error，处理错误
 * 编辑客户端启动参数 ZooKeeperMain，配置：Program arguments：-server 127.0.0.1:端口，注释：commons-cli scope
+* 配置logback.xml，放到zookeeper-server resources中，并将resources标记为resources root
 
 
 ### 1.FastLeaderElection 使用tcp进行服务间选举，构造函数有两个参数(当期成员对象QuorumPeer，连接管理器QuorumCnxManager)
